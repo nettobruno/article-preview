@@ -1,0 +1,201 @@
+/* Cor de fundo */
+div#background {
+  background-color: hsl(210, 46%, 95%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteúdo da página */
+div#content {
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 800px;
+  box-shadow: 0px 0px 10px hsl(212, 23%, 69%);
+}
+
+/* Estilização da imagem */
+div#content div#image {
+  background: url('../img/drawers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 90%;
+}
+
+/* Estilização dos textos */
+div#content div#article {
+  padding: 20px;
+}
+
+div#content div#article h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 15px;
+  line-height: 28px;
+}
+
+div#content div#article p {
+  font-size: 14px;
+  color:hsl(214, 17%, 51%);
+  line-height: 22px;
+}
+
+div#content div#professional {
+  margin-top: 20px;
+  position: relative;
+}
+
+div#content div#professional div.align {
+  display: flex;
+  align-items: center;
+}
+
+div#content div#professional img.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+div#content div#professional div.info {
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div#content div#professional div.info h3 {
+  color: hsl(217, 19%, 35%);
+}
+
+div#icon-share {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+div#icon-share img {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+div#social-media {
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 5px;
+  position: absolute;
+  top: -50px;
+  right: -90px;
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+  display: none;
+}
+
+div#social-media p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-right: 15px;
+}
+
+div#social-media img {
+  margin-right: 10px;
+  transition: .3s;
+}
+
+div#social-media img:hover {
+  transform: scale(1.2);
+}
+
+/* Pequena seta apontando para o ícone de share */
+.seta-baixo:before {
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid hsl(217, 19%, 35%);
+}
+
+
+/* Estilização para dispositivos menores */
+@media screen and (max-width: 768px) {
+  /* Cor de fundo */
+  div#background {
+    padding: 50px 10px;
+    height: auto;
+  }
+
+  /* Conteúdo da página */
+  div#content {
+    width: 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  /* Estilização da imagem */
+  div#content div#image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    width: 100%;
+  }
+
+  /* Estilização dos textos */
+  div#content div#article {
+    padding: 30px;
+  }
+
+  div#content div#professional {
+    margin-top: 30px;
+  }
+
+  div#icon-share {
+    z-index: 1000;
+  }
+
+  div#icon-share img {
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+
+  div#social-media {
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 340px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    display: none;
+  }
+
+  div#social-media img {
+    margin-right: 20px;
+  }
+
+  /* Pequena seta apontando para o ícone de share */
+  .seta-baixo:before {
+    display: none;
+  }
+}
