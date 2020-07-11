@@ -1,10 +1,12 @@
-function showSocialMedia() {
-  var display = document.getElementById("social-media").style.display;
+let buttonShare = document.querySelector('#icon-share');
+let blockInvisible = document.querySelector(".social-media");
 
-  if(display === "none") {
-    document.getElementById("social-media").style.display = "flex";
+buttonShare.addEventListener('click', function() {
+
+  if(blockInvisible.classList.contains('visible')) {
+    blockInvisible.classList.remove('visible');
+  } else {
+    blockInvisible.classList.add('visible');
   }
-  else {
-    document.getElementById("social-media").style.display = "none";
-  }
-}
+  
+});
